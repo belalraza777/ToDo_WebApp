@@ -1,0 +1,169 @@
+body {
+    font-family: "Open Sans", sans-serif;
+
+    /* background-color: #edf2f5 !important; */
+}
+
+/* navbar */
+.navbar {
+    background-color: #70b5ee;
+    padding: 0.2rem 5rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: large;
+    color: #050306;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover {
+    color: #0b59ad;
+}
+
+.profile-link i {
+    font-size: x-large;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* footer */
+.footer {
+    background-color: #70b5ee;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9rem;
+    z-index: 0;
+}
+
+/* OTHER */
+.main-box {
+    height: 400px;
+    width: 400px !important;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    text-align: center;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: rgb(104, 98, 98);
+}
+
+#mark {
+    border: none;
+}
+
+/* other */
+.list-group-item span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style for task text */
+.list-group-item p {
+    margin: 0;
+    font-weight: 550;
+    font-size: 1.1rem;
+
+}
+
+
+/* Button group spacing */
+.btn-group .btn {
+    margin-left: 5px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(72, 69, 69) !important;
+}
+
+.btn-group .btn:hover {
+    color: #59a2ef !important;
+}
+
+/* profile */
+.profile-card {
+    background: #eaebf2;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    text-align: center;
+    margin-left: 33%;
+}
+
+.profile-icon {
+    font-size: 60px;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.profile-info {
+    margin-bottom: 1.5rem;
+}
+
+.logout-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logout-btn:hover {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}

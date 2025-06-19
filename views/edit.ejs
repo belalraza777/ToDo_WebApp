@@ -1,0 +1,12 @@
+<% layout('layout/boilerplate') %>
+
+    <body>
+       
+        <form action="/todo/<%=taskid%>?_method=PATCH" method="post" class="mx-auto" style="max-width: 400px;">
+            <div class="mb-3">
+                <input type="text" placeholder="Edit your task" name="task" class="form-control" value="<%= list.task %>" required>
+            </div>
+
+      <button type="submit" class="btn btn-primary w-100">Edit</button>
+        </form>
+    </body>

@@ -1,0 +1,15 @@
+<% layout('layout/boilerplate') %>
+
+    <body>
+        <form action="/account/password?_method=PATCH" method="post" class="mx-auto" style="max-width: 400px;">
+            <div class="mb-3">
+                <input type="password" placeholder="Enter Your Old password" name="password" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" placeholder="Enter Your New password" name="newPassword" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Change password</button>
+        </form>
+
+    </body>

@@ -1,0 +1,21 @@
+<% layout('layout/boilerplate') %>
+
+<body>
+    <div class="container mt-5 main-box">
+    <h3 class="text-center mb-4">CREATE YOUR ACCOUNT</h3>
+    <form action="/user/signup" method="post" class="mx-auto" style="max-width: 400px;">
+      <div class="mb-3">
+        <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" name="email" placeholder="Enter Email" required>
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name="password" placeholder="Create Password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Create</button>
+      <br><br>
+      <a href="/user/login" >Already have an account?</a>
+    </form>
+  </div>
+</body>
