@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 const engine = require('ejs-mate');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
 const todoRouter = require("./router/todo");
 const authRouter = require("./router/auth");
@@ -37,7 +38,8 @@ app.use("/",accountRouter);
 app.use((err, req, res, next) => {
     const { status = 500, message = "some error" } = err;
     res.status(status).send({ message });
-})
+});
+
 app.listen(8080, () => {
     console.log("Server Running at 8080");
 });

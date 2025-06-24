@@ -15,8 +15,8 @@ const {
 function verifyLogin(req, res, next) {
     const token = req.cookies.token;
     if (token) {
-        jwt.verify(token, '1234', (err, user) => {
-            if (err) return next(err);
+        jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+            if (err) return res.redirect("user/login");
             req.user = user;
             return next();
         });

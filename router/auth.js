@@ -15,7 +15,7 @@ router.post("/login", async (req, res) => {
     if (user) {
         bcrypt.compare(password, user.password, function (err, result) {
             if (result) {
-                const token = jwt.sign({ email: user.email }, '1234');
+                const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET);
                 res.cookie("token", token);
                 res.redirect("/todo/");
             } else {
